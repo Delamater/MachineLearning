@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+      <title>Sage Partner Summit 2021 Twitter Sentiment Analysis</title>
+      <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
+   </head>
+   <body>
+      <h1>Delamater: Sage Partner Summit 2021 Twitter Sentiment Analysis</h1>
+      <p>What is Sage Summit? Before the pandemic, it was truly a sight to behold. I've presented at more than 10 or so of these and it's a real blast to get to know cusotmers and partners.
+      In this analysis I take a look at the tweets that tagged SagePartnerSummit and analyze the sentiment. 
+      Usually, when keynote presentations are made partners are pretty positive on their tweets, but we will find out if our NLP processor can detect outliers and or find a trend.
+      </br></br>
+      Note: Custom twitter extraction code was removed from the github check-in as it contains private twitter developer keys. 
+      </p>
+      <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#ConfusionMatrix">Home</a></li>
+      <li><a data-toggle="tab" href="#TopPositive">Top 5 Positive Tweets</a></li>
+      <li><a data-toggle="tab" href="#TopNeutral">Top 5 Neutral Tweets</a></li>
+      <li><a data-toggle="tab" href="#TopNegative">Top 5 Negative Tweets</a></li>
+      <li><a data-toggle="tab" href="#Sentiment">Sentiment</a></li>
+      </ul>
+
+      <div class="m-5 tab-content">
+         <div id="ConfusionMatrix" class="tab-pane fade in active">
+            <h3>Confusion Matrix</h3>
+               <figure>
+                  <img src="ConfusionMatric.png" alt="spurious" width="400px" height="400px" style="border:1px solid grey;">
+               </figure>            
+         </div>
+         <div id="TopPositive" class="tab-pane fade">
+            
+            <embed type="text/html" src="Positive.html" width="100%" height="500px">
+         </div>
+         <div id="TopNeutral" class="tab-pane fade">
+            
+            <embed type="text/html" src="Neutral.html" width="100%" height="500px">
+         </div>
+         <div id="TopNegative" class="tab-pane fade">
+            
+            <embed type="text/html" src="Negative.html" width="100%" height="500px">
+         </div>
+         <div id="Sentiment" class="tab-pane fade">
+            
+            <p>Take aways: </p>
+            <li>There are more positive sentiment than a negative ones. </li>
+            <li>The negative scale is lower than the positive scale</li>
+            <li>In general, the positive sentiment tends to build over the course of the summit ending stronger than it starts.</li>
+            <embed type="text/html" src="Sentiment.html" width="100%" height="1000px">
+         </div>            
+      </div>    
+      <p>
+         <li><a href="https://git.generalassemb.ly/delamater/14-natural-language-processing">code on github</a></li>
+      </p>
+   </body>
+</html>

@@ -2,8 +2,14 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+         div {
+            
+         word-wrap: break-word;
+         }         
+      </style>
+      <meta charset="utf-8">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -12,10 +18,10 @@
       <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
    </head>
    <body>
-      <h1>Delamater: Sage Partner Summit 2021 Twitter Sentiment Analysis</h1>
-      <p>What is Sage Summit? Before the pandemic, it was truly a sight to behold. I've presented at more than 10 or so of these and it's a real blast to get to know cusotmers and partners.
-      In this analysis I take a look at the tweets that tagged SagePartnerSummit and analyze the sentiment. 
-      Usually, when keynote presentations are made partners are pretty positive on their tweets, but we will find out if our NLP processor can detect outliers and or find a trend.
+      <h1>Sage City Forums Sentiment and Topic Extraction Analysis</h1>
+      <div>
+         <p>Using 
+      </div>
       </br></br>
       Note: Custom twitter extraction code was removed from the github check-in as it contains private twitter developer keys. 
       </p>
@@ -64,8 +70,14 @@
          </div>
 
       </div>    
+      <h4>References</h4>
       <p>
-         <li><a href="https://git.generalassemb.ly/delamater/14-natural-language-processing">code on github</a></li>
+         <li><a href="https://shichaoji.com/tag/topic-modeling-python-lda-visualization-gensim-pyldavis-nltk/">Richard Ji Modeling Python lda visualtion genism plydavis nltk</a></li>
+         <li><a href="https://pyldavis.readthedocs.io/en/latest/modules/API.html">pyLDavis Package</a></li>
+         <li><a href="https://towardsdatascience.com/the-complete-guide-for-topics-extraction-in-python-a6aaa6cedbbc">An overview of topics extraction in Python with LDA</a></li>
+         <li><a href="https://neptune.ai/blog/pyldavis-topic-modelling-exploration-tool-that-every-nlp-data-scientist-should-know">pyLDAvis: Topic Modelling Exploration Tool That Every NLP Data Scientist Should Know</a></li>
+         <li><a href="https://radimrehurek.com/gensim/models/coherencemodel.html">models.coherencemodel</a></li>
+         
       </p>
    </body>
 </html>

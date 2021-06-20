@@ -25,33 +25,37 @@
       
       </p>
          <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#ConfusionMatrix">Sentiment Analysis</a></li>
+            <li class="active"><a data-toggle="tab" href="#Home">Introduction</a></li>
+            <li><a data-toggle="tab" href="#ConfusionMatrix">Sentiment Analysis</a></li>
+            <li><a data-toggle="tab" href="#Sentiment">Sentiment</a></li>            
             <li><a data-toggle="tab" href="#TopPositive">Top 5 Positive Posts</a></li>
             <li><a data-toggle="tab" href="#TopNeutral">Top 5 Neutral Posts</a></li>
             <li><a data-toggle="tab" href="#TopNegative">Top 5 Negative Posts</a></li>
-            <li><a data-toggle="tab" href="#Sentiment">Sentiment</a></li>
             <li><a data-toggle="tab" href="#LDA">LDA Analysis</a></li>
             <li><a data-toggle="tab" href="#Topics">Topic Extraction</a></li>
          </ul>
 
       <div class="m-5 tab-content">
-         <div id="ConfusionMatrix" class="tab-pane fade in active">
+         <div id="Home" class="tab-pane fade in active">
+                   
+         </div>
+
+         <div id="ConfusionMatrix" class="tab-pane fade">
             <h3>Confusion Matrix</h3>
                <figure>
                   <img src="ConfusionMatric.png" alt="spurious" width="400px" height="400px" style="border:1px solid grey;">
                </figure>            
          </div>
          <div id="TopPositive" class="tab-pane fade">
-            
-            <embed type="text/html" src="Positive.html" width="100%" height="500px">
+            <embed type="text/html" src="Positive.html" width="100%" height="400px">
+            <embed type="text/html" src="Neutral.html" width="100%" height="400px">
+            <embed type="text/html" src="Negative.html" width="100%" height="400px">
          </div>
          <div id="TopNeutral" class="tab-pane fade">
             
-            <embed type="text/html" src="Neutral.html" width="100%" height="500px">
          </div>
          <div id="TopNegative" class="tab-pane fade">
             
-            <embed type="text/html" src="Negative.html" width="100%" height="500px">
          </div>
          <div id="Sentiment" class="tab-pane fade">
             
@@ -59,7 +63,8 @@
             <li>There are more positive sentiment than a negative ones. </li>
             <li>The negative scale is lower than the positive scale</li>
             <li>In general, the positive sentiment tends to build over the course of the summit ending stronger than it starts.</li>
-            <embed type="text/html" src="Sentiment.html" width="100%" height="1000px">
+            <embed type="text/html" src="Sentiment.html" width="70%" height="500px">
+            <embed type="text/html" src="UserSentimentOverTimeWithSlider.html" width="70%" height="500px">
          </div>            
          <div id="LDA" class="tab-pane fade">
             <embed type="text/html" src="myBook.html" width="100%" height="1000px">

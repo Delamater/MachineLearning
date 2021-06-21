@@ -74,13 +74,32 @@
                         <embed type="text/html" src="Neutral.html" width="100%" height="550px">
                         <embed type="text/html" src="Negative.html" width="100%" height="550px">
                      </div>                             
-                     <div id="SentimentHome" class="tab-pane fade in active">                 
+                     <div id="SentimentHome" class="tab-pane fade in active">     
+                        <br>            
                         <div>
-                           <embed type="text/html" src="Sentiment.html" width="85%" height="500px">
+                           <figure>
+                              <figcaption><p><span style="font-weight: bolder;color:blue">Positive </span> scores generally exceed <span style="color: red;font-weight: bolder;">negative</span> scores.</p></figcaption>
+                              <embed type="text/html" src="Sentiment.html" width="85%" height="500px">
+                           </figure>
+                           
                         </div>
+
+                        <br><br>            
+                        
+                        <ol>
+                           <li>Some users are <b>hyper-polar</b> compared to others. <b>Pam versus</b> <b>Chris</b></li>
+                           <li>Some people <b>stop posting</b> after some period of time. This might be natural, but if we had more data we could search for these trendlines as a <b>signal</b>.</li>
+                           <li>Denise starts out with a <b>higher compound score</b> but then eventually drops and <b>never recovers. Has she become a net detractor? We should cross reference her net promoter scores</b>.</li>
+                           <li>Girts tends to sit around a <b>neutral rating</b> almost always.</li>
+                        </ol>
                         <div>
                            <embed type="text/html" src="UserSentimentOverTimeWithSlider.html" width="85%" height="500px">                     
                         </div>
+
+                        <br><br>            
+                        <div>
+                           <embed type="text/html" src="MayUserSentimentOverTimeWithSlider.html" width="85%" height="500px">                     
+                        </div>                        
                         <div>
                            <embed type="text/html" src="NovUserSentimentOverTimeWithSlider.html" width="85%" height="500px">                     
                         </div>
@@ -99,7 +118,7 @@
                   <ul class="nav nav-tabs">
                      <!-- <li class="active"><a data-toggle="tab" href="#WordChart">Word Chart</a></li> -->
                      <!--<li><a data-toggle="tab" href="#ConfusionMatrix">Sentiment Confusion Matrix</a></li>-->
-                     <li><a data-toggle="tab" href="#Metrics">Metrics</a></li>            
+                     <li class="active"><a data-toggle="tab" href="#Metrics">Metrics</a></li>            
                      <li><a data-toggle="tab" href="#plyDavis">Visualization</a></li>            
                      <li><a data-toggle="tab" href="#Topics">Topic Extraction</a></li>
                   </ul>

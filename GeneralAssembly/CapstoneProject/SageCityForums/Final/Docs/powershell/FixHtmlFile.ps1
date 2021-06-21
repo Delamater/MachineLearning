@@ -90,8 +90,10 @@ $tableContent = Get-Content $myFile
 
 $tableContent = $tableContent -replace '<table border="1" class="dataframe">', '<table border="1" id="myTable">'
 $tableContent = $tableContent -replace '<tr style="text-align: right;">', '<tr style="text-align: right;" class="header">'
+
+$tableContent = $tableContent -replace '<th></th>', '<th style="width:7%">ID</th>'
 $tableContent = $tableContent -replace '<th>Forum Name</th>', '<th style="width:10%">Forum Name</th>'
-$tableContent = $tableContent -replace '<th>Forum_Post_Raw</th>', '<th style="width:55%">Forum Post Raw</th>'
+$tableContent = $tableContent -replace '<th>Forum_Post_Raw</th>', '<th style="width:51%">Forum Post Raw</th>'
 $tableContent = $tableContent -replace '<th>topic0_pct</th>', '<th style="width:12%">Topic 0 %</th>'
 $tableContent = $tableContent -replace '<th>topic1_pct</th>', '<th style="width:10%">Topic1 %</th>'
 $tableContent = $tableContent -replace '<th>topic2_pct</th>', '<th style="width:10%">Topic2 %</th>'

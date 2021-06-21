@@ -43,6 +43,7 @@ $prePend = '
 
 #myTable tr {
   border-bottom: 1px solid #ddd;
+  word-break: break-word
 }
 
 #myTable tr.header, #myTable tr:hover {
@@ -90,10 +91,10 @@ $tableContent = Get-Content $myFile
 $tableContent = $tableContent -replace '<table border="1" class="dataframe">', '<table border="1" id="myTable">'
 $tableContent = $tableContent -replace '<tr style="text-align: right;">', '<tr style="text-align: right;" class="header">'
 $tableContent = $tableContent -replace '<th>Forum Name</th>', '<th style="width:10%">Forum Name</th>'
-$tableContent = $tableContent -replace '<th>Forum_Post_Raw</th>', '<th style="width:60%">Forum Post Raw</th>'
-$tableContent = $tableContent -replace '<th>topic0_pct</th>', '<th style="width:5%">Topic 0 %</th>'
-$tableContent = $tableContent -replace '<th>topic1_pct</th>', '<th style="width:5%">Topic1 %</th>'
-$tableContent = $tableContent -replace '<th>topic2_pct</th>', '<th style="width:5%">Topic2 %</th>'
+$tableContent = $tableContent -replace '<th>Forum_Post_Raw</th>', '<th style="width:55%">Forum Post Raw</th>'
+$tableContent = $tableContent -replace '<th>topic0_pct</th>', '<th style="width:12%">Topic 0 %</th>'
+$tableContent = $tableContent -replace '<th>topic1_pct</th>', '<th style="width:10%">Topic1 %</th>'
+$tableContent = $tableContent -replace '<th>topic2_pct</th>', '<th style="width:10%">Topic2 %</th>'
 
 
 # Remove file if exists
@@ -108,3 +109,5 @@ Add-Content -Path $destinationFile $suffix
 # Add-Content -Path $destinationFileDebug $tableContent
 # Add-Content -Path $destinationFileDebug $suffix
 
+
+write-host 'Completed'

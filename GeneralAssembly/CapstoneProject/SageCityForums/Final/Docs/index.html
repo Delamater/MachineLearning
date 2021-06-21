@@ -26,30 +26,37 @@
       </p>
          <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#Home">Introduction</a></li>
-            <li><a data-toggle="tab" href="#ConfusionMatrix">Sentiment Analysis</a></li>
-            <li><a data-toggle="tab" href="#Sentiment">Sentiment</a></li>            
-            <li><a data-toggle="tab" href="#TopPositive">Top 5 Positive Posts</a></li>
+            <!--<li><a data-toggle="tab" href="#ConfusionMatrix">Sentiment Confusion Matrix</a></li>-->
+            <li><a data-toggle="tab" href="#Sentiment">Sentiment Time Series</a></li>            
+            <li><a data-toggle="tab" href="#TopSentiment">Top 5 Sentiment Data</a></li>
+            <li><a data-toggle="tab" href="#LDAModeling">LDA Modeling</a></li>            
+            <li><a data-toggle="tab" href="#LDA">LDA plyDavis Analysis</a></li>            
             <li><a data-toggle="tab" href="#TopNeutral">Top 5 Neutral Posts</a></li>
             <li><a data-toggle="tab" href="#TopNegative">Top 5 Negative Posts</a></li>
-            <li><a data-toggle="tab" href="#LDA">LDA Analysis</a></li>
             <li><a data-toggle="tab" href="#Topics">Topic Extraction</a></li>
          </ul>
 
       <div class="m-5 tab-content">
          <div id="Home" class="tab-pane fade in active">
-                   
+            <figure>
+               <img src="FrontGraphic3.png" alt="spurious" width="50%" height="50%" style="border:0px solid grey;">
+            </figure>  
          </div>
-
-         <div id="ConfusionMatrix" class="tab-pane fade">
+         <!--<div id="ConfusionMatrix" class="tab-pane fade">
             <h3>Confusion Matrix</h3>
-               <figure>
+               <!--<figure>
                   <img src="ConfusionMatric.png" alt="spurious" width="400px" height="400px" style="border:1px solid grey;">
                </figure>            
+         </div>-->
+         <div id="TopSentiment" class="tab-pane fade">
+            <embed type="text/html" src="Positive.html" width="100%" height="550px">
+            <embed type="text/html" src="Neutral.html" width="100%" height="550px">
+            <embed type="text/html" src="Negative.html" width="100%" height="550px">
          </div>
-         <div id="TopPositive" class="tab-pane fade">
-            <embed type="text/html" src="Positive.html" width="100%" height="400px">
-            <embed type="text/html" src="Neutral.html" width="100%" height="400px">
-            <embed type="text/html" src="Negative.html" width="100%" height="400px">
+         <div id="LDAModeling" class="tab-pane fade">
+            <figure>
+               <img src="CoherenceScores.png" alt="spurious" width="50%" height="50%" >
+            </figure>
          </div>
          <div id="TopNeutral" class="tab-pane fade">
             

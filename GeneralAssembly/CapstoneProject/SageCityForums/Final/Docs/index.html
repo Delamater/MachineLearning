@@ -26,14 +26,8 @@
       </p>
          <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#Home">Introduction</a></li>
-            <!--<li><a data-toggle="tab" href="#ConfusionMatrix">Sentiment Confusion Matrix</a></li>-->
             <li><a data-toggle="tab" href="#Sentiment">Sentiment</a></li>            
-            <li><a data-toggle="tab" href="#TopSentiment">Top 5 Sentiment Data</a></li>
             <li><a data-toggle="tab" href="#LDAModeling">LDA Modeling</a></li>            
-            <li><a data-toggle="tab" href="#LDA">LDA plyDavis Analysis</a></li>            
-            <li><a data-toggle="tab" href="#TopNeutral">Top 5 Neutral Posts</a></li>
-            <li><a data-toggle="tab" href="#TopNegative">Top 5 Negative Posts</a></li>
-            <li><a data-toggle="tab" href="#Topics">Topic Extraction</a></li>
          </ul>
 
       <div class="m-5 tab-content">
@@ -42,43 +36,11 @@
                <img src="FrontGraphic3.png" alt="spurious" width="50%" height="50%" style="border:0px solid grey;">
             </figure>  
          </div>
-         <!--<div id="ConfusionMatrix" class="tab-pane fade">
-            <h3>Confusion Matrix</h3>
-               <!--<figure>
-                  <img src="ConfusionMatric.png" alt="spurious" width="400px" height="400px" style="border:1px solid grey;">
-               </figure>            
-         </div>-->
-         <div id="TopSentiment" class="tab-pane fade">
 
-         </div>
-         <div id="LDAModeling" class="tab-pane fade">
-            <div class="col-md-6">
-               <figure>
-                  <img src="CoherenceScores.png" alt="spurious" width="65%" height="50%" >
-               </figure>            
-            </div>
-            <div class="col-md-6">
-               <figure>
-                  <img src="TopicValueCounts.png" alt="spurious" width="70%" height="20%" >
-               </figure>            
-            </div>                 
-            <div class="col-md-6">
-               <figure>
-                  <img src="heatmap.png" alt="spurious" width="70%" height="20%" >
-               </figure>            
-            </div>                                         
-            <div class="col-md-6">
-               <figure>
-                  <img src="WordGraphBob.png" alt="spurious" width="70%" height="20%" >
-               </figure>            
-            </div>                 
-         </div>
-         <div id="TopNeutral" class="tab-pane fade">
-            
-         </div>
-         <div id="TopNegative" class="tab-pane fade">
-            
-         </div>
+         <!-- <div id="TopSentiment" class="tab-pane fade">
+
+         </div> -->
+
          <div id="Sentiment" class="tab-pane fade">
             <ul class="nav nav-tabs">
                <li class="active"><a data-toggle="tab" href="#SentimentHome">Time Series</a></li>
@@ -101,13 +63,48 @@
             <li>The negative scale is lower than the positive scale</li>
             <li>In general, the positive sentiment tends to build over the course of the summit ending stronger than it starts.</li>-->
          </div>            
-         <div id="LDA" class="tab-pane fade">
-            <embed type="text/html" src="myBook.html" width="100%" height="1000px">
-         </div>
-         <div id="Topics" class="tab-pane fade">
-            <embed type="text/html" src="resultsFixed.html" width="100%" height="1000px">
-         </div>
 
+
+         <div id="LDAModeling" class="tab-pane fade">
+            <ul class="nav nav-tabs">
+               <li class="active"><a data-toggle="tab" href="#WordChart">Word Chart</a></li>
+               <!--<li><a data-toggle="tab" href="#ConfusionMatrix">Sentiment Confusion Matrix</a></li>-->
+               <li><a data-toggle="tab" href="#Metrics">Metrics</a></li>            
+               <li><a data-toggle="tab" href="#plyDavis">plyDavis</a></li>            
+               <li><a data-toggle="tab" href="#Topics">Topic Extraction</a></li>
+            </ul>
+
+            <div class="m-5 tab-content">
+               <div id="WordChart" class="tab-pane fade in active">                 
+                  <figure>
+                     <img src="WordGraphBob.png" alt="spurious" width="30%" height="20%" >
+                  </figure>                    
+               </div>
+               <div id="Metrics" class="tab-pane fade in active">
+                  <div class="col-md-6">
+                     <figure>
+                        <img src="CoherenceScores.png" alt="spurious" width="65%" height="50%" >
+                     </figure>            
+                  </div>
+                  <div class="col-md-6">
+                     <figure>
+                        <img src="TopicValueCounts.png" alt="spurious" width="70%" height="20%" >
+                     </figure>            
+                  </div>                 
+                  <div class="col-md-6">
+                     <figure>
+                        <img src="heatmap.png" alt="spurious" width="70%" height="20%" >
+                     </figure>            
+                  </div>                                         
+               </div>    
+               <div id="plyDavis" class="tab-pane fade in active">
+                  <embed type="text/html" src="myBook.html" width="100%" height="1000px">
+               </div>                   
+               <div id="Topics" class="tab-pane fade in active">
+                  <embed type="text/html" src="resultsFixed.html" width="100%" height="1000px">
+               </div>                                                   
+            </div>            
+         </div>
       </div>    
       <h4>References</h4>
       <p>

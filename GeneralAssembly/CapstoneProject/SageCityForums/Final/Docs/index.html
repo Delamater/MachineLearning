@@ -8,7 +8,39 @@
             div {
                
             word-wrap: break-word;
-            }                             
+            }                      
+            
+            section {
+               position: relative;
+             }
+             
+             section img {
+                position: absolute;
+             }
+             
+             .top {
+                animation-name: fade;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-duration: 3s;
+                animation-direction: alternate;
+             }
+             
+             @keyframes fade {
+                0% {
+                   opacity: 1;
+                }
+                25% {
+                   opacity: 1;
+                }
+                75% {
+                   opacity: 0;
+                }
+                100% {
+                   opacity: 0;
+                }
+             }            
+
          </style>
          <meta charset="utf-8">
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -22,12 +54,6 @@
          <div class="container">
             <h3 class="text-center">Sage City Forums Sentiment and Topic Extraction Analysis</h2>
             <h6 class="text-center">Bob Delamater</h6>
-         </div>
-         
-         <div class="container-fluid">
-            <div class="container">
-               <p>A Natural Language Processing (NLP) approach to analyze Sage City forum posts for Sage X3 using both a sentiment analyzer as well as a Latent Dirichlet Allocation (LDA) approach.</p>
-            </div>
          </div>
          <div class="tab-content">
             <ul class="nav nav-tabs">
@@ -44,28 +70,35 @@
                         <div class="card"">
                            <div class="card-body">
                               <h5 class="card-title" style="font-weight: bolder;">Latent Dirichlet Allocation (LDA)</h5>
-                              <p class="card-text">
+                              <p class="card-text">                               
                                  A review of <b>sentiment</b> along with <b>topic extraction</b> against Sage City forum posts for the last two years. 
                                  Sentiment over time is plotted by various users against known time markers (R&D release cycles).
                                  <b><a href="https://towardsdatascience.com/the-complete-guide-for-topics-extraction-in-python-a6aaa6cedbbc">LDA</a></b> was used to produce topics using the 
                                  <b><a href="https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0">C_umass</a></b> coherence measure.
                               </p>
-                              <br><br>
+                              <br>
                               <h5><b>Processing Steps Taken</b></h5>
                               <p>
                                  Using a Jupyter Notebook the following steps were taken to achieve the end goal of topic extraction and sentiment analysis. 
                                  <ol>
-                                    <li>Obtaining the data (internal sources)</li>
+                                    <li>Obtaining the data (Sage City Forum Management)</li>
                                     <li>Data Cleaning: html tag removal, Lemmatization</li>
                                     <li>Data Preparation: The use of bi and tri-grams</li>
                                     <li>Feature Engineering: Building features used for time series analysis, removing html tags</li>
                                     <li>Fine tuning: Tuning the number of topics, adding stop words, setting the number of words and passes for the LDA model to execute.</li>
+                                    <li><b>Human Review</b></li>
                                  </ol>
                               </p>
                            </div>
                         </div>   
                      </div>   
-                     <div class="col-md-2">
+                     <div class="col-md_2">
+                        <section>
+                           <img class="bottom" src="FrontGraphic3.png" style="width: 30%;">
+                           <img class="top" src="WordGraphBob.png" style="width: 30%;">
+                        </section>                        
+                     </div>
+                     <!-- <div class="col-md-2">
                         <div class="card">
                            <div class="card-body">
                               <h5 class="card-title" style="font-weight: bolder;"></h5>
@@ -75,7 +108,7 @@
                               </div>
                            </div>
                         </div>
-                     </div>                     
+                     </div>                      -->
                   </div>
                   <div class="row">
                      <div class="col-md-4">

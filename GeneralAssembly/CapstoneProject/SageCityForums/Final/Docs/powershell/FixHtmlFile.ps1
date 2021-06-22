@@ -1,6 +1,6 @@
 # Update results.html and make it searchable
 
- $myFile = "E:\g\MachineLearning\GeneralAssembly\CapstoneProject\SageCityForums\Final\Docs\results.html"
+ $myFile = "E:\g\MachineLearning\GeneralAssembly\CapstoneProject\SageCityForums\Final\Docs\resultsWithTopics.html"
  $destinationFile = "E:\g\MachineLearning\GeneralAssembly\CapstoneProject\SageCityForums\Final\Docs\resultsFixed.html"
  $destinationFileDebug = "E:\g\MachineLearning\GeneralAssembly\CapstoneProject\SageCityForums\Final\Docs\resultsFixed_debug.html"
 # $rawText = Get-Content $myFile
@@ -68,7 +68,7 @@ function myFunction() {
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[1];
+    td = tr[i].getElementsByTagName("td")[3];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {

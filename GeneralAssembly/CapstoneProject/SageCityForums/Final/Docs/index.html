@@ -5,18 +5,11 @@
       <head>
          <meta name="viewport" content="width=device-width, initial-scale=1">
          <style>
-            div {
-               
-            word-wrap: break-word;
-            }                      
+            div {word-wrap: break-word;}                      
             
-            section {
-               position: relative;
-             }
+            section {position: relative;}
              
-             section img {
-                position: absolute;
-             }
+            section img {position: absolute;}
              
              .top {
                 animation-name: fade;
@@ -26,19 +19,10 @@
                 animation-direction: alternate;
              }
              
-             @keyframes fade {
-                0% {
-                   opacity: 1;
-                }
-                25% {
-                   opacity: 1;
-                }
-                75% {
-                   opacity: 0;
-                }
-                100% {
-                   opacity: 0;
-                }
+             @keyframes fade {0% {opacity: 1;}
+                25% {opacity: 1;}
+                75% {opacity: 0;}
+                100% {opacity: 0;}
              }            
 
          </style>
@@ -73,8 +57,8 @@
                               <p class="card-text">                               
                                  A review of <b>sentiment</b> along with <b>topic extraction</b> against Sage City forum posts for the last two years. 
                                  Sentiment over time is plotted by various users against known time markers (R&D release cycles).
-                                 <b><a href="https://towardsdatascience.com/the-complete-guide-for-topics-extraction-in-python-a6aaa6cedbbc">LDA</a></b> was used to produce topics using the 
-                                 <b><a href="https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0">C_umass</a></b> coherence measure.
+                                 <b><a href="https://towardsdatascience.com/the-complete-guide-for-topics-extraction-in-python-a6aaa6cedbbc" target="_blank">LDA</a></b> was used to produce topics using the 
+                                 <b><a href="https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0" target="_blank">C_umass</a></b> coherence measure.
                               </p>
                               <br>
                               <h5><b>Processing Steps Taken</b></h5>
@@ -97,18 +81,7 @@
                            <img class="bottom" src="FrontGraphic3.png" style="width: 30%;">
                            <img class="top" src="WordGraphBob.png" style="width: 30%;">
                         </section>                        
-                     </div>
-                     <!-- <div class="col-md-2">
-                        <div class="card">
-                           <div class="card-body">
-                              <h5 class="card-title" style="font-weight: bolder;"></h5>
-                              <div class="card-text">
-                                 <img src="FrontGraphic3.png" class="top" alt="spurious" ">
-                                 <img src="WordGraphBob.png" class="bottom" alt="spurious"">
-                              </div>
-                           </div>
-                        </div>
-                     </div>                      -->
+                     </div>                   -->
                   </div>
                   <div class="row">
                      <div class="col-md-4">
@@ -142,10 +115,22 @@
                   </ul>            
                   <div class="m-5 tab-content">
                      <div id="Data" class="tab-pane fade in active">
-                        <p>This is some sample text. Things go here. I'm writing longer text to see how this goes. </p>
-                        <embed type="text/html" src="Positive.html" width="100%" height="550px">
-                        <embed type="text/html" src="Neutral.html" width="100%" height="550px">
-                        <embed type="text/html" src="Negative.html" width="100%" height="550px">
+                        <figure>
+                           
+                           <figcaption><h5><b>Positive Sentiment</b></h4></figcaption>
+                           <embed type="text/html" src="Positive.html" width="100%" height="550px">
+                        </figure>
+                        <figure>
+                           <figcaption><h5><b>Neutral Sentiment</b></h5></figcaption>
+                           <embed type="text/html" src="Neutral.html" width="100%" height="550px">      
+                        </figure>
+                        <figure>
+                           <figcaption><h5><b>Negative Sentiment</b></h5></figcaption>
+                           <embed type="text/html" src="Negative.html" width="100%" height="550px">      
+                        </figure>                                                
+                        
+                        
+                        
                      </div>                             
                      <div id="SentimentHome" class="tab-pane fade in active">     
                         <br>            
@@ -205,9 +190,7 @@
                               </figure>            
                            </div>              
                            <div class="col-md-4">
-                              <figure>
-                                 <img src="TopicValueCounts.png" alt="spurious" width="100%" height="20%" >
-                              </figure>            
+                              <img src="TopicValueCounts.png" alt="spurious" width="100%" height="100%" >
                            </div>   
                            <div class="col-md-4">
                               <figure>

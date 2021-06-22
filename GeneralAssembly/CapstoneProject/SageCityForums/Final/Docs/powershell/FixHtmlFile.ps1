@@ -1,8 +1,8 @@
 # Update results.html and make it searchable
 
- $myFile = "E:\g\MachineLearning\GeneralAssembly\CapstoneProject\SageCityForums\Final\Docs\resultsWithTopics.html"
- $destinationFile = "E:\g\MachineLearning\GeneralAssembly\CapstoneProject\SageCityForums\Final\Docs\resultsFixed.html"
- $destinationFileDebug = "E:\g\MachineLearning\GeneralAssembly\CapstoneProject\SageCityForums\Final\Docs\resultsFixed_debug.html"
+ $myFile = "..\resultsWithTopics.html"
+ $destinationFile = "..\resultsFixed.html"
+#  $destinationFileDebug = "E:\g\MachineLearning\GeneralAssemblyDocs\resultsFixed_debug.html"
 # $rawText = Get-Content $myFile
 $prePend = '
 <!DOCTYPE html>

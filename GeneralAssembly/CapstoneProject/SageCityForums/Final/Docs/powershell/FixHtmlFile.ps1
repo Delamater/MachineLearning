@@ -18,7 +18,7 @@ $prePend = '
   background-image: url(''/css/searchicon.png'');
   background-position: 10px 10px;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 75%;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
@@ -55,7 +55,7 @@ $prePend = '
 
 <h2>Sage City Forum Data</h2>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Topic Number Search.." title="Type in a name">
 '
 
 $suffix = 

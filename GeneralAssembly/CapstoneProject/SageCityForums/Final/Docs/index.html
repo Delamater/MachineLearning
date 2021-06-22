@@ -8,7 +8,7 @@
             div {
                
             word-wrap: break-word;
-            }         
+            }                             
          </style>
          <meta charset="utf-8">
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -39,24 +39,64 @@
             <div class="m-5 tab-content">
                <!-- Tab : Introduction -->
                <div id="Home" class="tab-pane fade in active">
-                  <figure>
-                     <img src="FrontGraphic3.png" alt="spurious" width="25%" height="25%" style="border:0px solid grey;">
-                  </figure>  
-                  <div id="WordChart" class="tab-pane fade in active">                 
-                     <figure>
-                        <img src="WordGraphBob.png" alt="spurious" width="15%" height="15%" style="margin-left: auto; margin-right: auto; display: block;">
-                     </figure>                    
-                  </div> 
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="card"">
+                           <div class="card-body">
+                              <h5 class="card-title" style="font-weight: bolder;">Latent Dirichlet Allocation (LDA)</h5>
+                              <p class="card-text">
+                                 A review of <b>sentiment</b> along with <b>topic extraction</b> against Sage City forum posts for the last two years. 
+                                 Sentiment over time is plotted by various users against known time markers (R&D release cycles).
+                                 <b><a href="https://towardsdatascience.com/the-complete-guide-for-topics-extraction-in-python-a6aaa6cedbbc">LDA</a></b> was used to produce topics using the 
+                                 <b><a href="https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0">C_umass</a></b> coherence measure.
+                              </p>
+                              <br><br>
+                              <h5><b>Processing Steps Taken</b></h5>
+                              <p>
+                                 Using a Jupyter Notebook the following steps were taken to achieve the end goal of topic extraction and sentiment analysis. 
+                                 <ol>
+                                    <li>Obtaining the data (internal sources)</li>
+                                    <li>Data Cleaning: html tag removal, Lemmatization</li>
+                                    <li>Data Preparation: The use of bi and tri-grams</li>
+                                    <li>Feature Engineering: Building features used for time series analysis, removing html tags</li>
+                                    <li>Fine tuning: Tuning the number of topics, adding stop words, setting the number of words and passes for the LDA model to execute.</li>
+                                 </ol>
+                              </p>
+                           </div>
+                        </div>   
+                     </div>   
+                     <div class="col-md-2">
+                        <div class="card">
+                           <div class="card-body">
+                              <h5 class="card-title" style="font-weight: bolder;"></h5>
+                              <div class="card-text">
+                                 <img src="FrontGraphic3.png" class="top" alt="spurious" ">
+                                 <img src="WordGraphBob.png" class="bottom" alt="spurious"">
+                              </div>
+                           </div>
+                        </div>
+                     </div>                     
+                  </div>
+                  <div class="row">
+                     <div class="col-md-4">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="card-text">
+                                 <h4>References</h4>
+                                 <p>
+                                    <li><a href="https://shichaoji.com/tag/topic-modeling-python-lda-visualization-gensim-pyldavis-nltk/" target="_blank">Richard Ji: modeling python lda visualization gensim pyldavis nltk</a></li>
+                                    <li><a href="https://pyldavis.readthedocs.io/en/latest/modules/API.html" target="_blank">pyLDavis Package</a></li>
+                                    <li><a href="https://towardsdatascience.com/the-complete-guide-for-topics-extraction-in-python-a6aaa6cedbbc" target="_blank">An overview of topics extraction in Python with LDA</a></li>
+                                    <li><a href="https://neptune.ai/blog/pyldavis-topic-modelling-exploration-tool-that-every-nlp-data-scientist-should-know" target="_blank">pyLDAvis: Topic Modelling Exploration Tool That Every NLP Data Scientist Should Know</a></li>
+                                    <li><a href="https://radimrehurek.com/gensim/models/coherencemodel.html" target="_blank">models.coherencemodel</a></li>
+                                    <li><a href="https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0" target="_blank">Evaluate Topic Models: Latent Dirichlet Allocation (LDA)</a></li>
+                                 </p>                                    
+                              </div>
+                           </div>
+                        </div>                        
+                     </div>
 
-                  <h4>References</h4>
-                  <p>
-                     <li><a href="https://shichaoji.com/tag/topic-modeling-python-lda-visualization-gensim-pyldavis-nltk/" target="_blank">Richard Ji: modeling python lda visualization gensim pyldavis nltk</a></li>
-                     <li><a href="https://pyldavis.readthedocs.io/en/latest/modules/API.html" target="_blank">pyLDavis Package</a></li>
-                     <li><a href="https://towardsdatascience.com/the-complete-guide-for-topics-extraction-in-python-a6aaa6cedbbc" target="_blank">An overview of topics extraction in Python with LDA</a></li>
-                     <li><a href="https://neptune.ai/blog/pyldavis-topic-modelling-exploration-tool-that-every-nlp-data-scientist-should-know" target="_blank">pyLDAvis: Topic Modelling Exploration Tool That Every NLP Data Scientist Should Know</a></li>
-                     <li><a href="https://radimrehurek.com/gensim/models/coherencemodel.html" target="_blank">models.coherencemodel</a></li>
-                     <li><a href="https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0" target="_blank">Evaluate Topic Models: Latent Dirichlet Allocation (LDA)</a></li>
-                  </p>                  
+                  </div>                  
                </div>
    
    

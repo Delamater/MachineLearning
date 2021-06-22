@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html>
+   <div style="max-width: 1500px;margin: auto;padding: 10px; border: 10px; border-color: darkgray;">
+      <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <style>
+            div {word-wrap: break-word;}                      
+            
+            section {position: relative;}
+             
+            section img {position: absolute;}
+             
+             .top {
+                animation-name: fade;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-duration: 3s;
+                animation-direction: alternate;
+             }
+             
+             @keyframes fade {0% {opacity: 1;}
+                25% {opacity: 1;}
+                75% {opacity: 0;}
+                100% {opacity: 0;}
+             }            
+
+         </style>
+         <meta charset="utf-8">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+         <title>Sage City Forums Analysis Capstone</title>
+         <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
+      </head>
+      <body style="margin-left: 30px;">
+         <div class="container">
+            <h3 class="text-center">Sage City Forums Sentiment and Topic Extraction Analysis</h2>
+            <h6 class="text-center">Bob Delamater</h6>
+         </div>
+         <div class="tab-content">
+            <ul class="nav nav-tabs">
+               <li class="active"><a data-toggle="tab" href="#Home">Introduction</a></li>
+               <li><a data-toggle="tab" href="#Sentiment">Sentiment</a></li>            
+               <li><a data-toggle="tab" href="#LDAModeling">LDA Modeling</a></li>            
+            </ul>
+   
+            <div class="m-5 tab-content">
+               <!-- Tab : Introduction -->
+               <div id="Home" class="tab-pane fade in active">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="card"">
+                           <div class="card-body">
+                              <h5 class="card-title" style="font-weight: bolder;">Latent Dirichlet Allocation (LDA)</h5>
+                              <p class="card-text">                               
+                                 A review of <b>sentiment</b> along with <b>topic extraction</b> against Sage City forum posts for the last two years. 
+                                 Sentiment over time is plotted by various users against known time markers (R&D release cycles).
+                                 <b><a href="https://towardsdatascience.com/the-complete-guide-for-topics-extraction-in-python-a6aaa6cedbbc" target="_blank">LDA</a></b> was used to produce topics using the 
+                                 <b><a href="https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0" target="_blank">C_umass</a></b> coherence measure.
+                              </p>
+                              <br>
+                              <h5><b>Processing Steps Taken</b></h5>
+                              <p>
+                                 Using a Jupyter Notebook the following steps were taken to achieve the end goal of topic extraction and sentiment analysis. 
+                                 <ol>
+                                    <li>Obtaining the data (Sage City Forum Management)</li>
+                                    <li>Data Cleaning: html tag removal, Lemmatization</li>
+                                    <li>Data Preparation: The use of bi and tri-grams</li>
+                                    <li>Feature Engineering: Building features used for time series analysis, removing html tags</li>
+                                    <li>Fine tuning: Tuning the number of topics, adding stop words, setting the number of words and passes for the LDA model to execute.</li>
+                                    <li><b>Human Review</b></li>
+                                 </ol>
+                              </p>
+                           </div>
+                        </div>   
+                     </div>   
+                     <div class="col-md_2">
+                        <section>
+                           <img class="bottom" src="FrontGraphic3.png" style="width: 30%;">
+                           <img class="top" src="WordGraphBob.png" style="width: 30%;">
+                        </section>                        
+                     </div>                   -->
+                  </div>
+                  <div class="row">
+                     <div class="col-md-4">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="card-text">
+                                 <h4>References</h4>
+                                 <p>
+                                    <li><a href="https://shichaoji.com/tag/topic-modeling-python-lda-visualization-gensim-pyldavis-nltk/" target="_blank">Richard Ji: modeling python lda visualization gensim pyldavis nltk</a></li>
+                                    <li><a href="https://pyldavis.readthedocs.io/en/latest/modules/API.html" target="_blank">pyLDavis Package</a></li>
+                                    <li><a href="https://towardsdatascience.com/the-complete-guide-for-topics-extraction-in-python-a6aaa6cedbbc" target="_blank">An overview of topics extraction in Python with LDA</a></li>
+                                    <li><a href="https://neptune.ai/blog/pyldavis-topic-modelling-exploration-tool-that-every-nlp-data-scientist-should-know" target="_blank">pyLDAvis: Topic Modelling Exploration Tool That Every NLP Data Scientist Should Know</a></li>
+                                    <li><a href="https://radimrehurek.com/gensim/models/coherencemodel.html" target="_blank">models.coherencemodel</a></li>
+                                    <li><a href="https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0" target="_blank">Evaluate Topic Models: Latent Dirichlet Allocation (LDA)</a></li>
+                                 </p>                                    
+                              </div>
+                           </div>
+                        </div>                        
+                     </div>
+
+                  </div>                  
+               </div>
+   
+   
+               <!-- Tab : Sentiment -->
+               <div id="Sentiment" class="tab-pane fade">
+                  <ul class="nav nav-tabs">
+                     <li class="active"><a data-toggle="tab" href="#Data">Data</a></li>                        
+                     <li><a data-toggle="tab" href="#SentimentHome">Time Series</a></li>
+                     <!--<li><a data-toggle="tab" href="#ConfusionMatrix">Sentiment Confusion Matrix</a></li>-->         
+                  </ul>            
+                  <div class="m-5 tab-content">
+                     <div id="Data" class="tab-pane fade in active">
+                        <figure>
+                           
+                           <figcaption><h5><b>Positive Sentiment</b></h4></figcaption>
+                           <embed type="text/html" src="Positive.html" width="100%" height="550px">
+                        </figure>
+                        <figure>
+                           <figcaption><h5><b>Neutral Sentiment</b></h5></figcaption>
+                           <embed type="text/html" src="Neutral.html" width="100%" height="550px">      
+                        </figure>
+                        <figure>
+                           <figcaption><h5><b>Negative Sentiment</b></h5></figcaption>
+                           <embed type="text/html" src="Negative.html" width="100%" height="550px">      
+                        </figure>                                                
+                        
+                        
+                        
+                     </div>                             
+                     <div id="SentimentHome" class="tab-pane fade in active">     
+                        <br>            
+                        <div>
+                           <figure>
+                              <figcaption><p><span style="font-weight: bolder;color:blue">Positive </span> scores generally exceed <span style="color: red;font-weight: bolder;">negative</span> scores.</p></figcaption>
+                              <embed type="text/html" src="Sentiment.html" width="85%" height="500px">
+                           </figure>
+                           
+                        </div>
+
+                        <br><br>            
+                        
+                        <ol>
+                           <li>Some users are <b>hyper-polar</b> compared to others. <b>Pam versus</b> <b>Chris</b></li>
+                           <li><b>nickdavies07 stops posting</b> after some period of time. This might be natural, but if we had more data we could search for these trend lines as a <b>signal</b>.</li>
+                           <li><b>Denise</b> starts out with a <b>higher compound score</b> but then eventually drops and <b>never recovers. Has she become a net detractor? We should cross reference her net promoter scores</b>.</li>
+                           <li>Girts tends to sit around a <b>neutral rating</b> almost always.</li>
+                        </ol>
+                        <div>
+                           <embed type="text/html" src="UserSentimentOverTimeWithSlider.html" width="85%" height="500px">                     
+                        </div>
+
+                        <br><br>            
+                        <div>
+                           <embed type="text/html" src="MayUserSentimentOverTimeWithSlider.html" width="85%" height="500px">                     
+                        </div>                        
+                        <div>
+                           <embed type="text/html" src="NovUserSentimentOverTimeWithSlider.html" width="85%" height="500px">                     
+                        </div>
+                     </div>       
+                  </div>            
+                  <!--<p>Take aways: </p>
+                  <li>There are more positive sentiment than a negative ones. </li>
+                  <li>The negative scale is lower than the positive scale</li>
+                  <li>In general, the positive sentiment tends to build over the course of the summit ending stronger than it starts.</li>-->
+               </div>            
+   
+   
+   
+               <!-- Tab : LDA Modeling -->
+               <div id="LDAModeling" class="tab-pane fade">
+                  <ul class="nav nav-tabs">
+                     <!-- <li class="active"><a data-toggle="tab" href="#WordChart">Word Chart</a></li> -->
+                     <!--<li><a data-toggle="tab" href="#ConfusionMatrix">Sentiment Confusion Matrix</a></li>-->
+                     <li class="active"><a data-toggle="tab" href="#Metrics">Metrics</a></li>            
+                     <li><a data-toggle="tab" href="#plyDavis">Visualization</a></li>            
+                     <li><a data-toggle="tab" href="#Topics">Topic Extraction</a></li>
+                  </ul>
+   
+                  <div class="m-5 tab-content">
+                     <div id="Metrics" class="tab-pane fade in active">
+                        <div class="row">
+                           <div class="col-md-4">
+                              <figure>
+                                 <img src="CoherenceScores.png" alt="spurious" width="100%" height="50%" >
+                              </figure>            
+                           </div>              
+                           <div class="col-md-4">
+                              <img src="TopicValueCounts.png" alt="spurious" width="100%" height="100%" >
+                           </div>   
+                           <div class="col-md-4">
+                              <figure>
+                                 <img src="heatmap.png" alt="spurious" width="100%" height="20%" >
+                              </figure>            
+                           </div>                                                                                 
+                        </div>
+                        <div class="row">
+              
+                        </div>                       
+                     </div>    
+                     <div id="plyDavis" class="tab-pane fade in active">
+                        <div class="card" style="width: 100%;">
+                           <div class="card-body">
+                              <h5 class="card-title" style="font-weight: bolder;">pyLDAvis Topic Coherence Visualization</h5>
+                              <p class="card-text">This implementation of pyLDAvis has 32 discrete topics chosen.</p>
+                           </div>
+                           <embed type="text/html" src="myBook.html" width="100%" height="1000px">   
+                        </div>
+                        
+                     </div>                   
+                     <div id="Topics" class="tab-pane fade in active">
+                        <embed type="text/html" src="resultsFixed.html" width="100%" height="1000px">
+                     </div>                                                   
+                  </div>            
+               </div>
+            </div>    
+         </div>
+   
+   
+      </body>
+   </div>
+
+</html>

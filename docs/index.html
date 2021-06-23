@@ -53,23 +53,23 @@
                      <div class="col-md-6">
                         <div class="card"">
                            <div class="card-body">
-                              <h5 class="card-title" style="font-weight: bolder;">Latent Dirichlet Allocation (LDA)</h5>
+                              <h5 class="card-title" style="font-weight: bolder;">NLP + Latent Dirichlet Allocation (LDA)</h5>
                               <p class="card-text">                               
-                                 A review of <b>sentiment</b> along with <b>topic extraction</b> against Sage City forum posts for the last two years. 
-                                 Sentiment over time is plotted by various users against known time markers (R&D release cycles).
-                                 <b><a href="https://towardsdatascience.com/the-complete-guide-for-topics-extraction-in-python-a6aaa6cedbbc" target="_blank">LDA</a></b> was used to produce topics using the 
+                                 Sage City forum posts for the last two years were reviewed using <b>sentiment</b> analysis along with <b>LDA topic extraction</b>, revealing data trends at specific dates. 
+                                 Sentiment over time is plotted by various users against known time markers (R&D release cycles) at these interesting data events.
+                                 <b><a href="https://towardsdatascience.com/the-complete-guide-for-topics-extraction-in-python-a6aaa6cedbbc" target="_blank">LDA</a></b> scoring technique chosen was the 
                                  <b><a href="https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0" target="_blank">C_umass</a></b> coherence measure.
                               </p>
                               <br>
                               <h5><b>Processing Steps Taken</b></h5>
                               <p>
-                                 Using a Jupyter Notebook the following steps were taken to achieve the end goal of topic extraction and sentiment analysis. 
+                                 Using a Jupyter Notebook the following steps were taken: 
                                  <ol>
-                                    <li>Obtaining the data (Sage City Forum Management)</li>
-                                    <li>Data Cleaning: html tag removal, Lemmatization</li>
-                                    <li>Data Preparation: The use of bi and tri-grams</li>
-                                    <li>Feature Engineering: Building features used for time series analysis, removing html tags</li>
-                                    <li>Fine tuning: Tuning the number of topics, adding stop words, setting the number of words and passes for the LDA model to execute.</li>
+                                    <li><b>Data procurement</b>  (Sage City Forum Management)</li>
+                                    <li><b> Data Cleaning:</b> html tag removal, Lemmatization</li>
+                                    <li><b>Data Preparation:</b> The use of bi and tri-grams</li>
+                                    <li><b>Feature Engineering:</b> Building features used for time series analysis, removing html tags</li>
+                                    <li><b>Fine tuning (iterative process):</b> Tuning the number of topics, adding stop words, setting the number of words and passes for the LDA model to execute.</li>
                                     <li><b>Human Review</b></li>
                                  </ol>
                               </p>
@@ -205,14 +205,27 @@
                      <div id="plyDavis" class="tab-pane fade in active">
                         <div class="card" style="width: 100%;">
                            <div class="card-body">
-                              <h5 class="card-title" style="font-weight: bolder;">pyLDAvis Topic Coherence Visualization</h5>
-                              <p class="card-text">This implementation of pyLDAvis has 32 discrete topics chosen.</p>
+                              <h5 class="card-title" style="font-weight: bolder;">Assessing pyLDAvis Topic Coherence Visualization</h5>
+                              <h5><b></li></b></h5>
+                              <ul>
+                                 <li><span style="color:darkslategrey; font-weight: bold;">Can you interpret the topics?</span> | <span style="color:grey; font-weight: bold"> Are topics unique? </span> | <span style="color: lightgray; font-weight: bold"> Are all topics represented by these topics? </span> 
+                              </ul>                              
+                              <p class="card-text">This implementation of pyLDAvis has <b>32</b> discrete topics chosen.</p>
                            </div>
                            <embed type="text/html" src="myBook.html" width="100%" height="1000px">   
                         </div>
                         
                      </div>                   
                      <div id="Topics" class="tab-pane fade in active">
+                        <div class="card" style="width: 100%;">
+                           <div class="card-body">
+                              <h5 class="card-title">Pre-selected topics for demonstration</h5>
+                              <ol>
+                                 <li> Topic 11: Purchase orders (Terms: PO, POH, Purchase Orders)
+                                 <li> Topic 19: Bill of Materials (Terms: BOM)
+                              </ol>
+                           </div>
+                        </div>
                         <embed type="text/html" src="resultsFixed.html" width="100%" height="1000px">
                      </div>                                                   
                   </div>            
